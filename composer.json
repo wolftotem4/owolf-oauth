@@ -1,0 +1,34 @@
+{
+  "name": "wolftotem4/owolf-oauth",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0.0",
+    "firebase/php-jwt": "^5.0",
+    "illuminate/http": "^5.5",
+    "illuminate/config": "^5.5",
+    "illuminate/support": "^5.5",
+    "illuminate/database": "^5.5",
+    "league/oauth2-client": "^2.2",
+    "league/oauth2-facebook": "^2.0",
+    "league/oauth2-google": "^2.0",
+    "phpseclib/phpseclib": "^2.0",
+    "prettus/l5-repository": "^2.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "OWolf\\OAuth\\": "src/OWolf/OAuth/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "OWolf\\OAuth\\Providers\\OAuthServiceProvider",
+        "OWolf\\OAuth\\Providers\\GoogleServiceProvider",
+        "OWolf\\OAuth\\Providers\\FacebookServiceProvider"
+      ],
+      "aliases": {
+        "OAuth": "OWolf\\OAuth\\Facades\\OAuth"
+      }
+    }
+  }
+}
